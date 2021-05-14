@@ -8,6 +8,8 @@
 </head>
 <body>
   <h1>{{$movies->title}}</h1>
+  <img src="{{$movies->poster}}" alt="">
   <p>{{$movies->plot}}</p>
+  <p><a href="{{route('movies.index')}}">Torna alla home</a></p>
 </body>
 </html>
