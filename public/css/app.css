@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 80px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #cb71df;
+}
+header img {
+  height: 80px;
+}
+
+.brand-wrapper {
+  width: 50%;
+  text-align: center;
+}
+
+.main-nav {
+  width: 25%;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+.main-nav ul li {
+  padding: 0 10px;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  margin-left: 50px;
+  border-bottom: dotted 1px black;
+  margin: 20px;
+  padding-bottom: 30px;
+}
+.card img {
+  width: 250px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+}
