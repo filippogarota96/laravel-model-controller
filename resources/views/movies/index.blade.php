@@ -7,11 +7,11 @@
   <title>Document</title>
 </head>
 <body>
-  @foreach ($movies as $movie)
-    <h3>{{$movie->title}}</h3>
-    <h4>{{$movie->author}}</h4>
-    <p>{{$movie->genre}}</p>
-    <p>{{$movie->plot}}</p>
-  @endforeach
+  <h1>Tutti i film</h1>
+    @foreach ($movies as $movie)
+      <h3>{{$movie->title}}</h3>
+      <h4>{{$movie->author}}</h4>
+      <p>{{$movie->genre}}</p>
+    @endforeach
 </body>
 </html>
