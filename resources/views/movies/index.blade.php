@@ -12,6 +12,8 @@
       <h3>{{$movie->title}}</h3>
       <h4>{{$movie->author}}</h4>
       <p>{{$movie->genre}}</p>
+      <img src="{{$movie->poster}}" alt="">
+      <a href="{{route('movies.show', ['movie' => $movie->id])}}">Dettaglio</a>
     @endforeach
 </body>
 </html>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserTable extends Migration
+class AddPosterToMoviesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('movies', function (Blueprint $table) {
+            $table->string('poster', 1000);
         });
     }
 
@@ -26,6 +25,8 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::table('movies', function (Blueprint $table) {
+            //
+        });
     }
 }
