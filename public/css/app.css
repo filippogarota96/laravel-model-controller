@@ -4,6 +4,23 @@
   margin: 0;
 }
 
+body {
+  font-family: "Merriweather", serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
 header {
   height: 80px;
   margin-bottom: 100px;
@@ -18,7 +35,7 @@ header img {
 }
 
 .brand-wrapper {
-  width: 50%;
+  width: calc(100% - 108px);
   text-align: center;
 }
 
@@ -37,17 +54,82 @@ header img {
   color: black;
 }
 
+.card__title h3 {
+  color: #9C0F0F;
+  font-size: 2em;
+}
+.card__title p {
+  text-transform: capitalize;
+  margin: 8px 0;
+  font-weight: 700;
+}
+.card__title a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
 .card {
+  display: flex;
   margin-left: 50px;
+  width: 50%;
   border-bottom: dotted 1px black;
-  margin: 20px;
   padding-bottom: 30px;
 }
 .card img {
   width: 250px;
+  margin-right: 40px;
 }
 
-.title {
+.arrow {
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+/*stile della scheda show del film*/
+.movie__card {
+  margin: auto;
+  padding: 20px;
+}
+.movie__card img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+.movie__card h2 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 30px;
+}
+
+.movie__card {
+  position: relative;
+}
+.movie__card a {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: black;
+  height: 50px;
+  width: 50px;
+  background-color: #CB71DF;
+  border-radius: 50%;
+}
+.movie__card .fa-arrow-left {
+  font-size: 30px;
+  margin: 10px 8px;
+}
+
+.movie__poster {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.btn__primary {
+  margin-left: 50px;
+  margin-right: 10px;
+  background-color: #9C0F0F;
+}
+
+.btn__secondary {
+  background-color: #CB71DF;
 }
