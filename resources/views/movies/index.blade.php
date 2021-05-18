@@ -16,6 +16,11 @@
                   <p>{{$movie->genre}}</p>
                   <a href="{{route('movies.show', ['movie' => $movie->id])}}">Dettagli <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
                   <a href="{{route('movies.edit', ['movie' => $movie->id])}}"><button type="button" class="btn btn-info">Modifica</button></a>
+                  <form action="{{route('movies.destroy', [ 'movie' => $movie->id ])}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Elimina</button>
+                  </form>
                 </div> 
               </div>
       @endforeach
