@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('movies', 'MovieController');
+
+//composer require doctrine/dbal:2.*
+
