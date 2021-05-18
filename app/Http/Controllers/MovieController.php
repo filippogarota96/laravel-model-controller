@@ -48,6 +48,8 @@ class MovieController extends Controller
         'plot' => 'required|string',
         'poster' => 'required|string'
       ]);
+
+    //   $movieNew = Movie::create($request->all());
       
       $movieNew = new Movie();
         $movieNew->title = $data['title'];
@@ -93,8 +95,9 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
+        //prendiamo i dati modificati
       $data = $request->all();
-
+        //li validiamo
         $request->validate([
             'title' => 'required|unique:movies|max:255',
             'author' => 'required|string|max:255',
@@ -102,9 +105,10 @@ class MovieController extends Controller
             'plot' => 'required|string',
             'poster' => 'required|string'
         ]);
-        
-      $movie ->update($request->all());
 
+      //facciamo l'update  
+      $movie ->update($request->all());
+        //rispediamo alla view
         return redirect()->route('movies.show', $movie);
  
     }

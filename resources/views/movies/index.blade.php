@@ -10,7 +10,7 @@
     <div class="movies">
       @foreach ($movies as $movie)
               <div class="card">
-                <img src="{{$movie->poster}}" alt="">
+                <img src="{{$movie->poster}}" alt=""> 
                 <div class="card__title">
                   <h3>{{$movie->title}}</h3>
                   <p>{{$movie->genre}}</p>
