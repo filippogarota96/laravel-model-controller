@@ -4,6 +4,9 @@
       The Movie Pub
   @endsection
   @section('content')
+    <div class="add-movie mb-5 text-right ">
+     <a href="{{route('movies.create')}}"><button type="button" class="btn btn-primary $header_color">Aggiungi un film</button></a>
+    </div>
     <div class="movies">
       @foreach ($movies as $movie)
               <div class="card">

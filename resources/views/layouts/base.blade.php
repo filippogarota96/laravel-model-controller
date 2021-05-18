@@ -23,9 +23,6 @@
       <div class="container">
       @yield('content')
       </div>
-      <div class="container show-movies">
-        @yield('content')
-      </div>
     </main> 
 </body>
 </html>

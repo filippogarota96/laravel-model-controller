@@ -1,7 +1,5 @@
 
     @extends('layouts.base')
-   
-   
     @section('content')
       <div class="movie__card">
         <h2>{{$movies->title}}</h2>
