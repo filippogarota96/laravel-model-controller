@@ -59,9 +59,6 @@ class MovieController extends Controller
 
         return redirect()->route('movies.show', $movieNew);
 
-
-        //validation
-
     }
 
     /**
@@ -82,9 +79,9 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Movie $movie)
     {
-        //
+        return view('movies.edit', compact('movie'));
     }
 
     /**
@@ -94,9 +91,22 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Movie $movie)
     {
-        //
+      $data = $request->all();
+
+        $request->validate([
+            'title' => 'required|unique:movies|max:255',
+            'author' => 'required|string|max:255',
+            'genre' => 'required|string|max: 100',
+            'plot' => 'required|string',
+            'poster' => 'required|string'
+        ]);
+        
+      $movie ->update($request->all());
+
+        return redirect()->route('movies.show', $movie);
+ 
     }
 
     /**

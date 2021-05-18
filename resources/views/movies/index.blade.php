@@ -15,6 +15,7 @@
                   <h3>{{$movie->title}}</h3>
                   <p>{{$movie->genre}}</p>
                   <a href="{{route('movies.show', ['movie' => $movie->id])}}">Dettagli <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+                  <a href="{{route('movies.edit', ['movie' => $movie->id])}}"><button type="button" class="btn btn-info">Modifica</button></a>
                 </div> 
               </div>
       @endforeach
