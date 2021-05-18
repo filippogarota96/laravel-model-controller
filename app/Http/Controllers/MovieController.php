@@ -44,7 +44,7 @@ class MovieController extends Controller
       $request->validate([
         'title' => 'required|unique:movies|max:255',
         'author' => 'required|string|max:255',
-        'genres' => 'required|string|max: 100',
+        'genre' => 'required|string|max: 100',
         'plot' => 'required|string',
         'poster' => 'required|string'
       ]);
@@ -52,7 +52,7 @@ class MovieController extends Controller
       $movieNew = new Movie();
         $movieNew->title = $data['title'];
         $movieNew->author = $data['author'];
-        $movieNew->genres = $data['genres'];
+        $movieNew->genre = $data['genre'];
         $movieNew->plot = $data['plot'];
         $movieNew->poster = $data['poster'];
         $movieNew->save();

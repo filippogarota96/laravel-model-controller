@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
           <label for="title">Generi</label>
-          <input type="text" class="form-control" id="title" name="genres" placeholder="Generi">
+          <input type="text" class="form-control" id="genre" name="genre" placeholder="Generi">
         </div>
         <label for="plot">Trama</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" name="plot" rows="3"></textarea>
