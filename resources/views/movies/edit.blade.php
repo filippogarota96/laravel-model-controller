@@ -12,7 +12,7 @@
     @endif
     
     <h2 class="mb-5">Modifica </h2>
-      <form action="{{route('movies.store')}}" method="POST">
+      <form action="{{route('movies.update', ['movie' => $movie->id])}}" method="POST">
       @csrf
       @method('PUT')
         <div class="form-group">
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
           <label for="title">Titolo</label>
-          <input type="text" class="form-control" id="title" name="title" placeholder="Titolo" value{{old('title') ? old('title') : $movie->title}}">
+          <input type="text" class="form-control" id="title" name="title" placeholder="Titolo" value="{{old('title') ? old('title') : $movie->title}}">
         </div>
         <div class="form-group">
           <label for="author">Autore</label>

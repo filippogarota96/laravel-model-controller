@@ -42,7 +42,7 @@ class MovieController extends Controller
       $data = $request->all();
       
       $request->validate([
-        'title' => 'required|unique:movies|max:255',
+        'title' => 'required|string|max:255',
         'author' => 'required|string|max:255',
         'genre' => 'required|string|max: 100',
         'plot' => 'required|string',
@@ -99,7 +99,7 @@ class MovieController extends Controller
       $data = $request->all();
         //li validiamo
         $request->validate([
-            'title' => 'required|unique:movies|max:255',
+            'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
             'genre' => 'required|string|max: 100',
             'plot' => 'required|string',
