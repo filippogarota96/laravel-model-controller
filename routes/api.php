@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Api')->group(function () {
+    // Controllers Within The "App\Http\Controllers\Admin" Namespace
+    Route::get('/movies', 'MovieController@index');
+    Route::get('/movies/{movie}', 'MovieController@show');
+});

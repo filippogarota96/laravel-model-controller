@@ -9,9 +9,10 @@
     </div>
     <div class="movies">
       @foreach ($movies as $movie)
-              <div class="card">
-                <img src="{{$movie->poster}}" alt=""> 
-                <div class="card__title">
+        
+         <div class="card__movie">
+           <img class="poster" src="{{$movie->poster}}" alt="{{$movie->title}}"> 
+                <div class="card-item">
                   <h3>{{$movie->title}}</h3>
                   <p>{{$movie->genre}}</p>
                   <a href="{{route('movies.show', ['movie' => $movie->id])}}">Dettagli <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
@@ -21,8 +22,15 @@
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Elimina</button>
                   </form>
-                </div> 
-              </div>
+                </div>
+         </div>
+         @if (session('message'))
+            <div class="alert alert-success">
+              {{session('message')}}
+            </div>
+             
+         @endif
+            
       @endforeach
     </div>  
   @endsection

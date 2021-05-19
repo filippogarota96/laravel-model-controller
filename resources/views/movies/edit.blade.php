@@ -12,7 +12,7 @@
     @endif
     
     <h2 class="mb-5">Modifica </h2>
-      <form action="{{route('movies.store')}}" method="PUT">
+      <form action="{{route('movies.store')}}" method="POST">
       @csrf
       @method('PUT')
         <div class="form-group">
